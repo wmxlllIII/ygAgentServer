@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dmy.ygagentserver.module.user.repository.SchoolRepository">
+
+    <select id="findSchoolByKey"
+            resultType="com.dmy.ygagentserver.module.user.entity.School">
+        SELECT *
+        FROM school
+        WHERE name LIKE CONCAT('%', #{key}, '%')
+        ORDER BY
+            CASE
+                WHEN name LIKE CONCAT(#{key}, '%') THEN 0
+                ELSE 1
+                END,
+            name ASC
+    </select>
+
+    <update id="updateBindSchool">
+        UPDATE auth
+        SET school_id = #{schoolId},
+            campus_id = #{campusId}
+        WHERE user_id = #{userId}
+    </update>
+
+    <select id="findSchoolById"
+            resultType="com.dmy.ygagentserver.module.user.entity.School">
+        SELECT *
+        FROM school
+        WHERE id = #{schoolId}
+    </select>
+
+    <select id="findCampusById"
+            resultType="com.dmy.ygagentserver.module.user.entity.Campus">
+        SELECT *
+        FROM campus
+        WHERE id = #{campusId}
+    </select>
+
+</mapper>

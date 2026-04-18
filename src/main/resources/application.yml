@@ -1,0 +1,31 @@
+server:
+  port: 8088
+
+
+logging:
+  level:
+    com:
+      example:
+        test:
+          server:
+            mapper: debug
+            service: info
+            controller: info
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.dmy.ygagentserver.module.user.entity
+  configuration:
+    #驼峰命名
+    map-underscore-to-camel-case: true
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/yg?useSSL=false&characterEncoding=utf8
+    username: root
+    password: 246881993
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+
