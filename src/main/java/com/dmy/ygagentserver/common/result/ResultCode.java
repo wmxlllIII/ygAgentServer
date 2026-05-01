@@ -2,6 +2,8 @@ package com.dmy.ygagentserver.common.result;
 
 public enum ResultCode {
 
+    TODO(-2, "待实现"),
+    FAILED(-1, "failed"),
     SUCCESS(0, "success"),
     USER_NOT_EXIST(1001, "用户不存在"),
     PASSWORD_ERROR(1002, "密码错误"),

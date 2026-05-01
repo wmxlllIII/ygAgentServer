@@ -3,10 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.dmy.ygagentserver.module.user.repository.SchoolRepository">
+<mapper namespace="com.dmy.ygagentserver.module.repository.SchoolRepository">
 
     <select id="findSchoolByKey"
-            resultType="com.dmy.ygagentserver.module.user.entity.School">
+            resultType="com.dmy.ygagentserver.module.entity.School">
         SELECT *
         FROM school
         WHERE name LIKE CONCAT('%', #{key}, '%')
@@ -26,14 +26,14 @@
     </update>
 
     <select id="findSchoolById"
-            resultType="com.dmy.ygagentserver.module.user.entity.School">
+            resultType="com.dmy.ygagentserver.module.entity.School">
         SELECT *
         FROM school
         WHERE id = #{schoolId}
     </select>
 
     <select id="findCampusById"
-            resultType="com.dmy.ygagentserver.module.user.entity.Campus">
+            resultType="com.dmy.ygagentserver.module.entity.Campus">
         SELECT *
         FROM campus
         WHERE id = #{campusId}

@@ -1,6 +1,6 @@
 package com.dmy.ygagentserver.common.util;
 
-import com.dmy.ygagentserver.module.user.entity.User;
+import com.dmy.ygagentserver.module.entity.User;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
