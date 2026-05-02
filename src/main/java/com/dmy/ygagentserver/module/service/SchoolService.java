@@ -11,7 +11,7 @@ import com.dmy.ygagentserver.module.dto.resp.SearchSchoolRespDTO;
 import java.util.List;
 
 public interface SchoolService {
-    ApiResponse<List<SearchSchoolRespDTO>> searchSchool(SearchSchoolReqDTO req);
+    ApiResponse<SearchSchoolRespDTO> searchSchool(SearchSchoolReqDTO req);
 
     ApiResponse<BindSchoolRespDTO> bindSchool(BindSchoolReqDTO req);
 

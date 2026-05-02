@@ -1,6 +1,5 @@
 package com.dmy.ygagentserver.module.dto.resp;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,6 +7,5 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TaskPubRespDTO {
-    private int taskId;
+public class PubOrderRespDTO {
 }

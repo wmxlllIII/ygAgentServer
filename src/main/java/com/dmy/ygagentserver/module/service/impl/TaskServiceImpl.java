@@ -17,6 +17,6 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public ApiResponse<TaskPubRespDTO> publish(TaskPubReqDTO req) {
-        return ApiResponse.error(ResultCode.TODO.code(), ResultCode.TODO.msg());
+        return null;
     }
 }

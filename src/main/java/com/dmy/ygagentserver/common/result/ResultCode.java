@@ -2,7 +2,6 @@ package com.dmy.ygagentserver.common.result;
 
 public enum ResultCode {
 
-    TODO(-2, "待实现"),
     FAILED(-1, "failed"),
     SUCCESS(0, "success"),
     USER_NOT_EXIST(1001, "用户不存在"),
@@ -12,7 +11,8 @@ public enum ResultCode {
     UNEXIST_SCHOOL(1005,   "学校不存在"),
     UNEXIST_CAMPUS(1006,  "校区不存在"),
     UNMATCH_CAMPUS(1007,  "校区不属于该学校"),
-    AAA(1008,  "绑定学校失败"),
+    PHONE_ALREADY_REGISTERED(1008,  "此手机号已被注册"),
+    AAA(283091,  "绑定学校失败"),
     SYSTEM_ERROR(9999, "系统异常");
 
     private final int code;

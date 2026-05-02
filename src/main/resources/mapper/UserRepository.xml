@@ -8,7 +8,7 @@
     <select id="findById"
             resultType="com.dmy.ygagentserver.module.entity.User">
         SELECT *
-        FROM user_profile
+        FROM users
         WHERE user_id = #{userId}
 
     </select>

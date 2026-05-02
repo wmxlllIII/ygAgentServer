@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoginRespDTO {
-
     private Long userId;
     private String username;
+    private String avatar;
     private String token;
 }

@@ -7,5 +7,6 @@ import lombok.Data;
 public class LoginReqDTO {
     private LoginType loginType;
     private String account;
+    private String avatar;
     private String password;
 }

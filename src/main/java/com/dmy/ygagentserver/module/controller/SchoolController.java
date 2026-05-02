@@ -26,7 +26,7 @@ public class SchoolController {
 
     @PostMapping("/search")
     @ApiOperation("搜索")
-    public ApiResponse<List<SearchSchoolRespDTO>> login(@RequestBody SearchSchoolReqDTO req) {
+    public ApiResponse<SearchSchoolRespDTO> login(@RequestBody SearchSchoolReqDTO req) {
         return schoolService.searchSchool(req);
     }
 
